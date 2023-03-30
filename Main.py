@@ -176,10 +176,10 @@ print()
 getcore(selectedversion, selectedfolder, selectedcore)
 if os.name == 'nt':
 	with open(selectedfolder + "/start.bat", "wt") as f:
-		f.write("java -Xmx1024M -Xms1024M -jar core nogui")
+		f.write("java -Xmx2048M -Xms1024M -jar core.jar nogui")
 else:
 	with open(selectedfolder + "/start.sh", "wt") as f:
-		f.write("java -Xmx1024M -Xms1024M -jar core.jar nogui")
+		f.write("java -Xmx2048M -Xms1024M -jar core.jar nogui")
 print("Startup files created.")
 print("Server downloaded.")
 print("")
@@ -189,7 +189,7 @@ if i == "y" or "Y":
 	print("Server is starting...")
 	print()
 	os.chdir(selectedfolder)
-	os.system("java -Xmx1024M -Xms1024M -jar core.jar nogui")
+	os.system("java -Xmx2048M -Xms1024M -jar core.jar nogui")
 else:
 	print("Press any key to exit")
 	input()
